@@ -1,16 +1,16 @@
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 
 def substrings(string, dictionary)
-    hash = {}
+    make_hash = {}
    downcase = string.downcase!
    remove_non_letters = downcase.gsub!(/\W+/, ' ').split(" ").to_s
 
    dictionary.each do |word|
-    hash[word] = remove_non_letters.scan(word).count if remove_non_letters.include?(word)
+    make_hash[word] = remove_non_letters.scan(word).count if remove_non_letters.include?(word)
   end
 
 
-hash
+make_hash
    
 end
 
